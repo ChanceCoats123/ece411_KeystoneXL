@@ -1,0 +1,21 @@
+mp3_final.asm Final Register Values:
+
+r0:	4x04C6 (1222)
+r1:	4x08E4 (2276)
+r2:	4xFFFF (65535)
+r3:	4x8388 (33672)
+r4:	4x2954 (10580)
+r5:	4x493C (18748)
+r6:	4x239C (9116)
+r7:	4x5C15 (23573)
+
+mp3_competition.asm Final Register Values:
+
+r0:	4xCDE7 (52711)
+r1:	4x3035 (12341)
+r2:	4x8596 (34198)
+r3:	4x11B6 (4534)
+r4:	4x94A6 (38054)
+r5:	4x360A (13834)
+r6:	4xD530 (54576)
+r7:	4x1020 (4128)

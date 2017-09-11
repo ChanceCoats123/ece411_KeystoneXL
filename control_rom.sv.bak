@@ -1,0 +1,106 @@
+import lc3b_types::*;
+
+/* TO DO:: Decide ctrl word size */
+
+module control_rom
+(
+	input lc3b_opcode opcode,
+	output lc3b_control_word ctrl
+);
+
+always_comb
+begin
+	/* Default assignments */
+	ctrl.opcode = opcode;
+	ctrl.aluop = alu_add;
+	ctrl.load_cc = 1'b0;
+	ctrl.load_regfile = 1'b0;
+	ctrl.stb_ind = 1'b0;
+	ctrl.ldb_ind = 1'b0;
+	ctrl.mem_read = 1'b0;
+	ctrl.mem_write = 1'b0;
+	ctrl.mem_byte_enable = 2'b11;
+	ctrl.src2mux_sel = 1'b0;
+	ctrl.drmux_sel = 1'b0;
+	ctrl.sr1mux_sel = 1'b0;
+	ctrl.ldi_ind = 1'b0;
+	ctrl.sti_ind = 1'b0;
+	ctrl.trap_ind = 1'b0;
+	ctrl.addr1mux_sel = 1'b0;
+	ctrl.addr2mux_sel = 1'b0;
+	ctrl.offmux_sel = 3'b000;
+	
+	/* Control signal assignments based on opcode */
+	
+	case(opcode)
+	begin
+		op_add: begin
+		
+		end
+		
+		op_and: begin
+	
+		end
+	
+		op_br: begin
+	
+		end
+	
+		op_jmp: begin
+	
+		end
+	
+		op_jsr: begin
+	
+		end
+	
+		op_ldb: begin
+	
+		end
+	
+		op_ldi: begin
+	
+		end
+	
+		op_ldr: begin
+	
+		end
+	
+		op_lea: begin
+		
+		end
+		
+		op_not: begin
+		
+		end
+		
+		op_shf: begin
+		
+		end
+		
+		op_stb: begin
+		
+		end
+		
+		op_sti: begin
+		
+		end
+	
+		op_str: begin
+		
+		end
+		
+		op_trap: begin
+		
+		end
+		
+		default: begin
+		/* Unknown opcode, set control word to zero */
+			ctrl = 0;
+		end	
+	
+	endcase
+
+end
+
+endmodule : control_rom

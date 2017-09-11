@@ -1,0 +1,112 @@
+///// Baseline Performance \\\\\
+
+Full LC-3b ISA with Data Forwarding
+Branch Predition: Stall until resolved
+Cache hierarchy:
+2-way SA L1I, 128-bit lines, True LRU Replacement
+2-way SA L1D, 128-bit lines, True LRU Replacement
+2-way SA Unified L2, 256-bit lines, True LRU Replacement
+
+Power Consumption:
+Static - 633.89 mW
+Dynamic - 307.89 mw
+Total - 1053.59 mW
+
+Fmax (using default place and route settings):
+85 C - 101.xx MHz
+0 C - 108.xx MHz
+
+Performance (Time until the halt branch reaches decode):
+mp1_final.asm - 6115 ns => 611.5 cycles
+mp2_final.asm - 9225 ns => 922.5 cycles
+mp3_cp2a.asm - 2795 ns => 279.5 cycles
+mp3_cp2b.asm - 44015 ns => 4401.5 cycles
+mp3_cp3.asm - 29985 ns => 2998.5 cycles
+mp3_final.asm - N/A
+mp3_competition.asm - N/A
+
+
+///// 4-way SA Unified L2 Cache Performance \\\\\
+
+Full LC-3b ISA with Data Forwarding
+Branch Predition: Stall until resolved
+Cache hierarchy:
+2-way SA L1I, 128-bit lines, True LRU Replacement
+2-way SA L1D, 128-bit lines, True LRU Replacement
+4-way SA Unified L2, 256-bit lines, Pseudo LRU Replacement
+
+Power Consumption:
+Static - 632.15 mW
+Dynamic - 325.07 mW
+Total - 1055.90 mW
+
+Fmax (using default place and route settings):
+85 C - 103.21 MHz
+0 C - 111.17 MHz
+
+Performance (Time until the halt branch reaches decode):
+mp1_final.asm - 6015 ns => 601.5 cycles
+mp2_final.asm - 8375 ns => 837.5 cycles
+mp3_cp2a.asm - 2765 ns => 276.5 cycles
+mp3_cp2b.asm - 58665 ns => 5866.5 cycles
+mp3_cp3.asm - 39875 ns => 3987.5 cycles
+mp3_final.asm - 1369885 ns => 136988.5 cycles
+mp3_competition.asm - 4614095ns => 461409.5 cycles
+
+
+///// Victim Cache Performance \\\\\
+
+Full LC-3b ISA with Data Forwarding
+Branch Predition: Stall until resolved
+Cache hierarchy:
+2-way SA L1I, 128-bit lines, True LRU Replacement
+2-way SA L1D, 128-bit lines, True LRU Replacement
+4-way SA Unified L2, 256-bit lines, Pseudo LRU Replacement
+4-way FA Victim Cache, 256-bit lines, True LRU Replacement, write-back only dirty lines
+
+Power Consumption:
+Static - 619.00 mW
+Dynamic - 354.57 mW
+Total - 1134.58 mW
+
+Fmax (using default place and route settings):
+85 C - 103.92 MHz
+0 C - 111.62 MHz
+
+Performance (Time until the halt branch reaches decode):
+mp1_final.asm - 6115 ns => 611.5 cycles
+mp2_final.asm - 8495 ns => 849.5 cycles
+mp3_cp2a.asm - 2825 ns => 282.5 cycles
+mp3_cp2b.asm - 43725 ns => 4372.5 cycles
+mp3_cp3.asm - 30155 ns => 3015.5 cycles
+mp3_final.asm - 1238235 ns => 123823.5 cycles
+mp3_competition.asm - 3638815 ns => 363881.5 cycles
+
+
+///// BTB Performance \\\\\
+
+Full LC-3b ISA with Data Forwarding
+Branch Predition: 4-way SA BTB with local address predition history within the BTB
+Cache hierarchy:
+2-way SA L1I, 128-bit lines, True LRU Replacement
+2-way SA L1D, 128-bit lines, True LRU Replacement
+4-way SA Unified L2, 256-bit lines, Pseudo LRU Replacement
+4-way FA Victim Cache, 256-bit lines, True LRU Replacement, write-back only dirty lines
+
+Power Consumption:
+Static - 619.97 mW
+Dynamic - 279.96 mW
+Total - 968.09 mW
+
+Fmax (using default place and route settings):
+85 C - 104.11 MHz
+0 C - 111.27 MHz
+
+Performance (Time until the halt branch reaches decode):
+mp1_final.asm - 5885 ns => 588.5 cycles
+mp2_final.asm - 8015 ns => 801.5 cycles
+mp3_cp2a.asm - 2805 ns => 208.5 cycles
+mp3_cp2b.asm - 43595 ns => 4359.5 cycles
+mp3_cp3.asm - 30005 ns => 3000.5 cycles
+mp3_final.asm - 968325 ns => 96832.5 cycles
+mp3_competition.asm - 2977225 ns => 297722.5 cycles
